@@ -1,0 +1,105 @@
+\documentclass[dvipdfmx,11pt]{jsarticle}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{ascmac}
+\usepackage{color}
+\usepackage{empheq}
+\usepackage{mathrsfs}
+\usepackage[margin=25truemm]{geometry}
+\usepackage{setspace}
+
+\usepackage{tikz}
+\usetikzlibrary{calc, angles, quotes}
+
+
+
+
+\newcommand{\Div}{\operatorname{div}}
+\newcommand{\dsp}{\displaystyle}
+\newcommand{\e}{\varepsilon}
+\newcommand{\Ha}{\mathcal{H}}
+\newcommand{\prob}{\vspace{2mm}\pro}
+\newcommand{\redprob}{\vspace{2mm}\color{red}\pro\color{black}}
+\newcommand{\blueprob}{\vspace{2mm}\color{blue}\pro\color{black}}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\setmid}{\mathrel{}\middle|\mathrel{}}
+
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{Def}[theorem]{Definition}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{rem}[theorem]{Remark}
+\newtheorem{ex}[theorem]{Example}
+\newtheorem{assumption}{Assumption}
+\newtheorem{pro}{問題}
+
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{prop*}{Proposition}
+\newtheorem*{rem*}{Remark}
+\newtheorem*{assumption*}{Assumption}
+\newtheorem*{notation*}{Notation}
+
+\DeclareMathOperator{\spt}{spt} 
+
+\newcommand{\mres}{\mathbin{\vrule height 1.6ex depth 0pt width
+0.13ex\vrule height 0.13ex depth 0pt width 1.3ex}}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+
+\makeatletter
+\c@MaxMatrixCols=11
+\makeatother
+
+\numberwithin{equation}{section}
+
+\setlength{\parindent}{0pt}
+
+\title{第2回 補足問題}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\vspace{-1.5cm}
+
+\prob 関数$f : (0, 1)\rightarrow \mathbb{R}$は $\dsp\lim_{x\rightarrow 0}f(x)=0$かつ$\dsp\lim_{x\rightarrow 0}\frac{f(x)-f(x/2)}{x}=0$を満たすとする. このとき, 極限値$\dsp\lim_{x\rightarrow 0}\frac{f(x)}{x}$を求めよ.
+
+\prob $I$は区間, $f:I\rightarrow\mathbb{R}$は単調とし, 任意の$a, b\in I$と, $f(a)$と$f(b)$の間の任意の実数$\xi$に対し, ある$x\in I$が存在して $f(x)=\xi$が成立するとする. このとき$f$は連続であることを示せ. また, この問題は何が言いたいと思う？
+
+\prob\label{aa} 連続関数 $f : \mathbb{R}\rightarrow \mathbb{R}$は任意の$x, y\in\mathbb{R}$に対して$|x-y|\leqslant|f(x)-f(y)|$を満たすとする.
+
+(1) $f$は狭義単調であることを示せ.
+
+(2) $f$は全射であることを示せ.
+
+\prob 関数$f:[0, \infty)\rightarrow[0, \infty)$で, 任意の$x, y\in[0,\infty)$に対して
+\[f(x)f(yf(x))=f(x+y)\]
+を満たすものを全て答えよ.
+
+\prob $f$ が $[0,\infty)$ 上で連続とする. ある $a>0$ が存在して $f$ が $[a,\infty)$ 上で一様連続であるとき, $f$ は $[0,\infty)$ 上で一様連続であることを示せ.
+
+\prob $f$ を有界開区間 $(a , b)$ で連続な関数とする. 次の(1)と(2)が同値であることを示せ.
+
+(1) $f$ は $(a , b)$ で一様連続である.
+
+(2) $[a , b]$ 上の連続関数 $g$ で, すべての $x\in (a , b)$ に対して $g(x)=f(x)$ を満たすものが存在する.
+
+\prob $\dsp f(x)=\frac{1}{x}$ は $(1 , \infty)$ でリプシッツ連続であるが, $(0 , \infty)$ でリプシッツ連続でないことを示せ.
+
+\prob リプシッツ連続ならば一様連続であることを示せ. また一様連続であるがリプシッツ連続でない関数の例を挙げよ.
+
+\prob $f(x)=
+\begin{cases}
+	\dsp\frac{1}{\log x} & (x\in (0,1/2]) \\ 0 & (x=0)
+\end{cases}$ 
+は一様連続であるが, 任意の $\alpha \in (0,1)$ に対し $\alpha$-H\"{o}lder連続でないことを示せ.
+
+
+\end{document}
